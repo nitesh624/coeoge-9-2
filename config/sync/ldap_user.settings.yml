@@ -1,0 +1,30 @@
+drupalAcctProvisionServer: iitbldap
+ldapEntryProvisionServer: null
+drupalAcctProvisionTriggers:
+  - drupal_on_login
+  - drupal_on_update_create
+ldapEntryProvisionTriggers: {  }
+userUpdateCronQuery: none
+userUpdateCronInterval: daily
+orphanedDrupalAcctBehavior: ldap_user_orphan_email
+orphanedDrupalAcctReportingInbox: ''
+orphanedCheckQty: 100
+orphanedAccountCheckInterval: weekly
+userConflictResolve: resolve
+manualAccountConflict: conflict_reject
+acctCreation: ldap_behaviour
+ldapUserSyncMappings:
+  drupal:
+    field-ldap_user_current_dn:
+      ldap_attr: '[dn]'
+      user_attr: '[field.ldap_user_current_dn]'
+      convert: false
+      user_tokens: ''
+      config_module: ldap_user
+      prov_module: ldap_user
+      prov_events:
+        - create_drupal_user
+        - sync_to_drupal_user
+_core:
+  default_config_hash: xGaDFlyXTmhzluhiRhEx58v_3Fu-nMhCzEBF8K4eqHU
+disableAdminPasswordField: false

@@ -1,0 +1,94 @@
+uuid: 011a94db-ca90-40fa-ab12-7adf3bd3d491
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.industrial_partner.field_content
+    - field.field.node.industrial_partner.field_link
+    - field.field.node.industrial_partner.field_partner_logo
+    - image.style.media_library
+    - node.type.industrial_partner
+  module:
+    - ds
+    - entity_reference_revisions
+    - link
+    - linked_field
+    - media
+    - user
+id: node.industrial_partner.default
+targetEntityType: node
+bundle: industrial_partner
+mode: default
+content:
+  field_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_partner_logo:
+    type: media_thumbnail
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: media_library
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_link
+        advanced:
+          target: _blank
+        token: ''
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

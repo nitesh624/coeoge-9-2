@@ -1,0 +1,28 @@
+uuid: 3642c442-33c0-4f18-8d37-3b7bd0543107
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student_photo_
+    - media.type.image
+    - node.type.student_page
+id: node.student_page.field_student_photo_
+field_name: field_student_photo_
+entity_type: node
+bundle: student_page
+label: "Student photo\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

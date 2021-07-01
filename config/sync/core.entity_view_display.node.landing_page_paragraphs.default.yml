@@ -1,0 +1,61 @@
+uuid: ce8b734f-7f1b-4286-8898-7173bc5b0232
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_paragraphs.field_content
+    - node.type.landing_page_paragraphs
+  module:
+    - ds
+    - entity_reference_revisions
+    - user
+id: node.landing_page_paragraphs.default
+targetEntityType: node
+bundle: landing_page_paragraphs
+mode: default
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

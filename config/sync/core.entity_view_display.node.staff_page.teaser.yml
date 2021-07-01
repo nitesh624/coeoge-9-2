@@ -1,0 +1,52 @@
+uuid: 392ac063-ee88-4da7-a69a-040a01f424c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.staff_page.body
+    - field.field.node.staff_page.field_date_of_joining
+    - field.field.node.staff_page.field_date_of_leaving
+    - field.field.node.staff_page.field_email
+    - field.field.node.staff_page.field_phone_no
+    - field.field.node.staff_page.field_staff_category
+    - field.field.node.staff_page.field_staff_designation
+    - field.field.node.staff_page.field_staff_full_name
+    - field.field.node.staff_page.field_staff_photo
+    - field.field.node.staff_page.field_staff_status
+    - node.type.staff_page
+  enforced:
+    module:
+      - staff_page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: ZIKkDJc0MbBzkGLJcCMj149g9PRLYWfpRkpm6Fpitrc
+id: node.staff_page.teaser
+targetEntityType: node
+bundle: staff_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_date_of_joining: true
+  field_date_of_leaving: true
+  field_email: true
+  field_phone_no: true
+  field_staff_category: true
+  field_staff_designation: true
+  field_staff_full_name: true
+  field_staff_photo: true
+  field_staff_status: true
+  langcode: true

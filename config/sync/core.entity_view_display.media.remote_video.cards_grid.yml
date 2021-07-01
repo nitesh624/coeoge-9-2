@@ -1,0 +1,64 @@
+uuid: 662f63b4-fb14-4d42-9501-53d0a6f27cc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.cards_grid
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - ds
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.remote_video.cards_grid
+targetEntityType: media
+bundle: remote_video
+mode: cards_grid
+content:
+  field_media_oembed_video:
+    type: oembed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      max_width: 400
+      max_height: 300
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

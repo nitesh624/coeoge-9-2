@@ -1,0 +1,66 @@
+uuid: 41bd4abe-5512-4d52-9d90-a2d0e44137b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_view.field_description
+    - field.field.paragraph.list_view.field_padding_top_bottom
+    - field.field.paragraph.list_view.field_section_title_alignment
+    - field.field.paragraph.list_view.field_section_title_style
+    - field.field.paragraph.list_view.field_title
+    - field.field.paragraph.list_view.field_view_ref
+    - paragraphs.paragraphs_type.list_view
+  module:
+    - options
+    - viewsreference
+id: paragraph.list_view.default
+targetEntityType: paragraph
+bundle: list_view
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_padding_top_bottom:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_alignment:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_section_title_style:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_view_ref:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

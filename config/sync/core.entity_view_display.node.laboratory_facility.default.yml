@@ -1,0 +1,397 @@
+uuid: 54dd5404-798e-475d-b66f-fd3565850e16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.laboratory_facility.body
+    - field.field.node.laboratory_facility.field_content
+    - field.field.node.laboratory_facility.field_cost_of_purchase
+    - field.field.node.laboratory_facility.field_date_of_purchase
+    - field.field.node.laboratory_facility.field_facility_access_available_
+    - field.field.node.laboratory_facility.field_indented_by_faculty_
+    - field.field.node.laboratory_facility.field_instrument_class
+    - field.field.node.laboratory_facility.field_purpose_of_equipment
+    - field.field.node.laboratory_facility.field_source_of_funding
+    - field.field.node.laboratory_facility.field_status_of_facility
+    - field.field.node.laboratory_facility.field_type_of_the_facility
+    - node.type.laboratory_facility
+  enforced:
+    module:
+      - laboratory_facility
+  module:
+    - datetime
+    - ds
+    - entity_reference_revisions
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_purpose_of_equipment
+        - field_type_of_the_facility
+        - field_instrument_class
+        - field_status_of_facility
+        - field_indented_by_faculty_
+        - field_date_of_purchase
+        - field_facility_access_available_
+        - field_source_of_funding
+        - body
+        - field_content
+_core:
+  default_config_hash: TNsb6oNeXgEUEbWRR2OXLMRUmdkagGMNEUYFVgAOTVw
+id: node.laboratory_facility.default
+targetEntityType: node
+bundle: laboratory_facility
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 9
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+  field_content:
+    weight: 10
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: ds_content
+  field_date_of_purchase:
+    weight: 6
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-Y
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: datetime_custom
+    region: ds_content
+  field_facility_access_available_:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: 'Facility Access'
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: list_default
+    region: ds_content
+  field_indented_by_faculty_:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: ds_content
+  field_instrument_class:
+    type: list_default
+    weight: 3
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: 'col-sm-9 list-unstyled'
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+  field_purpose_of_equipment:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10 mt-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: ds_content
+  field_source_of_funding:
+    type: list_default
+    weight: 8
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_status_of_facility:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: col-sm-9
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: list_default
+    region: ds_content
+  field_type_of_the_facility:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: div
+            lbw-cl: 'col-sm-3 fw-bold'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'row mb-10'
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: 'col-sm-9 list-unstyled'
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    type: list_default
+    region: ds_content
+hidden:
+  field_cost_of_purchase: true
+  langcode: true
+  links: true

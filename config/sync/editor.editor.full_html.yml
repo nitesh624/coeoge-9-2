@@ -1,0 +1,101 @@
+uuid: d2ef0ad5-b4b4-47df-bc57-0d49b6dfb61e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Underline
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - SpecialChar
+            - RemoveFormat
+            - Styles
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - Outdent
+            - Indent
+            - Format
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - Copy
+            - Language
+        -
+          name: Tools
+          items:
+            - Maximize
+            - ShowBlocks
+            - Source
+        -
+          name: Tables
+          items:
+            - tableinsert
+            - tabledelete
+            - tableproperties
+            - tablerowinsertbefore
+            - tablerowinsertafter
+            - tablerowdelete
+            - tablecolumninsertbefore
+            - tablecolumninsertafter
+            - tablecolumndelete
+            - tablecellinsertbefore
+            - tablecellinsertafter
+            - tablecelldelete
+            - tablecellproperties
+            - tablecellsmerge
+            - tablecellmergeright
+            - tablecellmergedown
+            - tablecellsplithorizontal
+            - tablecellsplitvertical
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

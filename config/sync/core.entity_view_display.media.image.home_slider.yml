@@ -1,0 +1,67 @@
+uuid: 43c2de06-21b5-4b69-9268-5aa5e36369af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.home_slider
+    - field.field.media.image.field_media_image
+    - image.style.home_slider
+    - media.type.image
+  module:
+    - ds
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.home_slider
+targetEntityType: media
+bundle: image
+mode: home_slider
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: home_slider
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: image
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

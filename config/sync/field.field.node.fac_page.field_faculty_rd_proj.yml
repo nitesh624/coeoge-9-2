@@ -1,0 +1,63 @@
+uuid: fefba7f3-a0b3-405d-8eb3-8d02721412b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_rd_proj
+    - node.type.fac_page
+    - paragraphs.paragraphs_type.r_d_projects
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: bNNNP2Yp6sNca5zvzlQf1c7W_5g2On1RQcg6h3JQ5j8
+id: node.fac_page.field_faculty_rd_proj
+field_name: field_faculty_rd_proj
+entity_type: node
+bundle: fac_page
+label: 'Faculty R&D Projects'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      r_d_projects: r_d_projects
+    target_bundles_drag_drop:
+      attachments:
+        weight: 11
+        enabled: false
+      banner:
+        weight: 12
+        enabled: false
+      card:
+        weight: 13
+        enabled: false
+      card_list:
+        weight: 14
+        enabled: false
+      gallery:
+        weight: 15
+        enabled: false
+      hero_view:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      list_view:
+        weight: 18
+        enabled: false
+      r_d_projects:
+        enabled: true
+        weight: 19
+      text:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

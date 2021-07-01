@@ -1,0 +1,25 @@
+uuid: 152ef384-3e77-4400-9ba1-f904e561e19a
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_1_1
+  module:
+    - crop
+name: card_list_200x200
+label: 'Card List 200X200'
+effects:
+  c258c132-cf55-4b6f-af36-1950d65d26aa:
+    uuid: c258c132-cf55-4b6f-af36-1950d65d26aa
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_1_1
+  94556f05-7a5e-4fce-99c4-b3f6adc70d82:
+    uuid: 94556f05-7a5e-4fce-99c4-b3f6adc70d82
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 200
+      height: 200
+      anchor: center-center

@@ -1,0 +1,275 @@
+uuid: f7b55adc-7271-44c2-aacf-fdc25358580b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fac_page.body
+    - field.field.node.fac_page.field_affiliations
+    - field.field.node.fac_page.field_awards_and_fellowship
+    - field.field.node.fac_page.field_background
+    - field.field.node.fac_page.field_building
+    - field.field.node.fac_page.field_courses_taught
+    - field.field.node.fac_page.field_department
+    - field.field.node.fac_page.field_detailed_information_page
+    - field.field.node.fac_page.field_email
+    - field.field.node.fac_page.field_employment_category
+    - field.field.node.fac_page.field_faculty_attachments
+    - field.field.node.fac_page.field_faculty_designation
+    - field.field.node.fac_page.field_faculty_photo
+    - field.field.node.fac_page.field_faculty_rd_proj
+    - field.field.node.fac_page.field_full_name
+    - field.field.node.fac_page.field_google_scholar_id
+    - field.field.node.fac_page.field_mobile_number
+    - field.field.node.fac_page.field_orcid
+    - field.field.node.fac_page.field_phone_no
+    - field.field.node.fac_page.field_research_area
+    - field.field.node.fac_page.field_room_no
+    - field.field.node.fac_page.field_scopus_id
+    - node.type.fac_page
+  enforced:
+    module:
+      - acadmix_faculty
+  module:
+    - field_group
+    - link
+    - media_library
+    - name
+    - path
+third_party_settings:
+  field_group:
+    group_personal_information:
+      children:
+        - field_full_name
+        - field_department
+        - field_faculty_designation
+        - field_faculty_photo
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Personal Information'
+      region: content
+    group_external_id:
+      children:
+        - field_google_scholar_id
+        - field_orcid
+        - field_scopus_id
+      parent_name: ''
+      weight: 16
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'External Id'
+      region: hidden
+    group_contact_information:
+      children:
+        - field_email
+        - field_phone_no
+        - field_detailed_information_page
+      parent_name: ''
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact Information'
+      region: content
+    group_research_data:
+      children:
+        - field_faculty_rd_proj
+        - field_research_area
+      parent_name: ''
+      weight: 18
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Research data'
+      region: hidden
+    group_teaching_and_professional_:
+      children:
+        - field_affiliations
+        - field_awards_and_fellowship
+        - field_background
+        - field_courses_taught
+      parent_name: ''
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Teaching and professional backgrounds'
+      region: hidden
+_core:
+  default_config_hash: wuE737WyxICuNk4K1_DsgMEyxVfmCxS2OmkoxOjbxYA
+id: node.fac_page.default
+targetEntityType: node
+bundle: fac_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_department:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_detailed_information_page:
+    weight: 19
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_email:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_faculty_designation:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_faculty_photo:
+    type: media_library_widget
+    weight: 23
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_full_name:
+    weight: 19
+    settings:
+      widget_layout: stacked
+      labels:
+        title: Title
+        given: Given
+        middle: 'Middle name(s)'
+        family: Family
+        generational: Generational
+        credentials: Credentials
+      title_display:
+        title: description
+        given: description
+        middle: description
+        family: description
+        generational: description
+        credentials: description
+      size:
+        title: 6
+        given: 20
+        middle: 20
+        family: 20
+        generational: 5
+        credentials: 35
+      override_field_settings: false
+      show_component_required_marker: false
+      credentials_inline: false
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_phone_no:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_affiliations: true
+  field_awards_and_fellowship: true
+  field_background: true
+  field_building: true
+  field_courses_taught: true
+  field_employment_category: true
+  field_faculty_attachments: true
+  field_faculty_rd_proj: true
+  field_google_scholar_id: true
+  field_mobile_number: true
+  field_orcid: true
+  field_research_area: true
+  field_room_no: true
+  field_scopus_id: true

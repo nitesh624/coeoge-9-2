@@ -1,0 +1,28 @@
+uuid: c3dce5b1-bc90-4f51-a2b2-4ce54f01ad8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faculty_attachments
+    - media.type.document
+    - node.type.fac_page
+id: node.fac_page.field_faculty_attachments
+field_name: field_faculty_attachments
+entity_type: node
+bundle: fac_page
+label: 'Faculty attachments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
